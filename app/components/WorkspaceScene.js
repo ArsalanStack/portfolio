@@ -240,7 +240,7 @@ function AmbientDust() {
 export default function WorkspaceScene() {
     return (
         <Canvas
-            camera={{ position: [0.5, 1.2, 7.0], fov: 48 }}
+            camera={{ position: [0, 3.0, 14.0], fov: 40 }}
             dpr={[1, 2]}
             gl={{ antialias: true, alpha: true }}
             shadows
@@ -276,9 +276,9 @@ export default function WorkspaceScene() {
                     enableZoom={false}
                     enablePan={false}
                     autoRotate
-                    autoRotateSpeed={0.4}
-                    minPolarAngle={Math.PI / 4}
-                    maxPolarAngle={Math.PI / 2.2}
+                    autoRotateSpeed={0.3}
+                    minPolarAngle={Math.PI / 3.5}
+                    maxPolarAngle={Math.PI / 2.4}
                     enableDamping
                     dampingFactor={0.06}
                 />
