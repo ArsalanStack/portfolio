@@ -408,6 +408,7 @@ body::after {
   padding: 8rem 4rem;
   position: relative;
   z-index: 1;
+  overflow: visible;
 }
 
 .section-label {
@@ -449,16 +450,16 @@ body::after {
 .about-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 3rem;
   align-items: center;
+  overflow: visible;
 }
 
 .about-3d {
   width: 100%;
-  height: 480px;
-  border-radius: 16px;
+  height: 520px;
+  border-radius: 0;
   overflow: visible;
-  /* let the 3d scene breathe outside */
   position: relative;
 }
 

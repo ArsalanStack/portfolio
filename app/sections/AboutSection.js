@@ -41,8 +41,16 @@ export default function AboutSection() {
             />
 
             <div className="about-section">
-                {/* 3D Scene */}
-                <div className="about-3d">
+                {/* 3D Scene — bleeds outside grid cell for open feel */}
+                <div
+                    className="about-3d"
+                    style={{
+                        position: 'relative',
+                        overflow: 'visible',
+                        marginLeft: '-4rem',
+                        marginRight: '-2rem',
+                    }}
+                >
                     <AboutScene />
                 </div>
 
