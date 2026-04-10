@@ -91,7 +91,7 @@ function FloatOrb({ position, size = 0.1, brightness = 0.8 }) {
 export default function GlobeScene() {
     return (
         <Canvas
-            camera={{ position: [0, 0, 6], fov: 45 }}
+            camera={{ position: [0, 0, 9], fov: 50 }}
             dpr={[1, 1.5]}
             gl={{ antialias: true, alpha: true }}
             style={{ background: 'transparent' }}

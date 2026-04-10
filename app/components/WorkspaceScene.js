@@ -240,7 +240,7 @@ function AmbientDust() {
 export default function WorkspaceScene() {
     return (
         <Canvas
-            camera={{ position: [0.8, 0.8, 4.5], fov: 52 }}
+            camera={{ position: [0.5, 1.2, 7.0], fov: 48 }}
             dpr={[1, 2]}
             gl={{ antialias: true, alpha: true }}
             shadows
