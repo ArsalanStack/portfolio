@@ -262,14 +262,16 @@ export default function WorkspaceScene() {
 
                 <Stars radius={80} depth={40} count={1800} factor={2} saturation={0} fade speed={0.5} />
 
-                {/* ─ Scene objects ─ */}
-                <Desk />
-                <Monitor />
-                <Keyboard />
-                <Tower />
-                <Mug />
-                <DeskLamp />
-                <Headphones />
+                {/* ─ Scene objects shifted upwards ─ */}
+                <group position={[0, 0.8, 0]}>
+                    <Desk />
+                    <Monitor />
+                    <Keyboard />
+                    <Tower />
+                    <Mug />
+                    <DeskLamp />
+                    <Headphones />
+                </group>
                 <AmbientDust />
 
                 <OrbitControls
