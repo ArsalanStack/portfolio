@@ -269,23 +269,24 @@ export default function ContactSection() {
                     </div>
                 </div>
 
-                {/* ── Right: Globe floating freely ── */}
+                {/* ── Right: Globe — full column height ── */}
                 <div
                     ref={globeRef}
                     className="globe-wrap"
                     style={{
                         position: 'relative',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        minHeight: '500px',
+                        alignSelf: 'stretch',
+                        minHeight: '100%',
                     }}
                 >
-                    {/* The canvas fills this area — transparent so section bg shows */}
+                    {/* Canvas stretches to fill the column completely */}
                     <div
                         style={{
                             position: 'absolute',
-                            inset: '-60px',        /* bleed outside to feel "open" */
+                            top: '-4rem',
+                            bottom: '-4rem',
+                            left: '-2rem',
+                            right: '-4rem',
                             zIndex: 0,
                         }}
                     >
@@ -296,7 +297,7 @@ export default function ContactSection() {
                     <span
                         style={{
                             position: 'absolute',
-                            bottom: '0',
+                            bottom: '1rem',
                             left: '50%',
                             transform: 'translateX(-50%)',
                             fontFamily: 'Space Mono, monospace',
