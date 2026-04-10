@@ -1,7 +1,7 @@
 'use client';
 import { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Float, Stars, RoundedBox, Image, Text } from '@react-three/drei';
+import { OrbitControls, Float, Stars, RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
 
 /* ─── Materials ─── */
@@ -77,36 +77,12 @@ function Monitor() {
             <mesh material={matScreen} position={[0, 0, 0.026]}>
                 <boxGeometry args={[2.6, 1.54, 0.01]} />
             </mesh>
-            {/* ── Screen Content Group ── */}
-            <group position={[0, 0, 0.035]}>
-                {/* Photo of Arsalan */}
-                <Image
-                    url="/profile.jpg"
-                    position={[0.7, 0.15, 0]}
-                    scale={[0.75, 1.0]}
-                    toneMapped={false}
-                />
-
-                {/* ABOUT ME Text */}
-                <Text
-                    position={[0.7, -0.55, 0]}
-                    fontSize={0.16}
-                    color="#ffffff"
-                    anchorX="center"
-                    anchorY="middle"
-                    font="https://fonts.gstatic.com/s/syne/v22/8vIJ7w4q3Xzno9-oAxknMw.woff"
-                    letterSpacing={0.05}
-                >
-                    ABOUT ME
-                </Text>
-
-                {/* Left side "Code lines" */}
-                {[-0.55, -0.3, -0.05, 0.2, 0.45].map((y, i) => (
-                    <mesh key={i} material={matCodeGlow} position={[-0.45, y, 0]}>
-                        <boxGeometry args={[0.7 + (i % 3) * 0.2, 0.018, 0.001]} />
-                    </mesh>
-                ))}
-            </group>
+            {/* "Code lines" on screen — thin glowing strips */}
+            {[-0.55, -0.3, -0.05, 0.2, 0.45].map((y, i) => (
+                <mesh key={i} material={matCodeGlow} position={[(-0.4 + i * 0.1) * 0.5, y, 0.032]}>
+                    <boxGeometry args={[0.8 + (i % 3) * 0.4, 0.018, 0.001]} />
+                </mesh>
+            ))}
             {/* Monitor stand neck */}
             <mesh material={matMetal} position={[0, -1.05, 0.1]}>
                 <boxGeometry args={[0.1, 0.35, 0.1]} />
